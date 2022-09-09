@@ -32,6 +32,6 @@ test:
 
 production:
   <<: *default
-  database: wallet
+  database: wallet_2
   encode: unicode
 
