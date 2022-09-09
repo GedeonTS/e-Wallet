@@ -31,6 +31,6 @@ production:
   database: mydb
   username: Gedeonts
   password: mydb
-  url: <%= ENV["MYDB_DATABASE_URL"] %>
+  # url: <%= ENV["MYDB_DATABASE_URL"] %>
   # host: <%= ENV['MYDB_HOSTNAME'] %>
   # port: <%= ENV['MYDB_PORT'] %>
