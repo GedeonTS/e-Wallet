@@ -1,8 +1,12 @@
 # e-Wallet App
 
 <div style="display:flex">
-<img src="" >
-<img src="" >
+<img src="https://user-images.githubusercontent.com/97834160/189349051-c0d0a462-1e20-4b6d-9677-c9db9aea27c4.png" width="220" height="380">
+<img src="https://user-images.githubusercontent.com/97834160/189348100-e2bd97dd-f38f-41f4-a3ec-ac4fb3be8b9b.png" width="230" height="380">
+<img src="https://user-images.githubusercontent.com/97834160/189348482-8fe3b7b9-b540-4bde-a911-e210c54399be.png" width="230" height="380">
+
+
+
 </div>
 
 A mobile web application where you can manage your budget: you have a list of transactions associated with a category, so that you can see how much money you spent and on what.
