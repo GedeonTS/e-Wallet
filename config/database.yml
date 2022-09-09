@@ -32,6 +32,7 @@ test:
 
 production:
   <<: *default
-  database: wallet_2
-  encode: unicode
+  database: myapp_production
+  username: myapp
+  password: <%= ENV['MYAPP_DATABASE_PASSWORD'] %>
 
