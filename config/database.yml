@@ -34,6 +34,4 @@ production:
   <<: *default
   database: wallet
   encode: unicode
-  username: postgres
-  password: recipe
-  host: localhost
+
