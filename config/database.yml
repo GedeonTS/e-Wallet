@@ -8,7 +8,7 @@ default: &default
   adapter: postgresql
   encode: unicode
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  timeout: 5000
+  # timeout: 5000
 
 development:
   <<: *default
@@ -31,6 +31,6 @@ production:
   database: mydb
   username: Gedeonts
   password: <%= ENV['MYDB_DATABASE_PASSWORD'] %>
-  url: <%= ENV["MYDB_DATABASE_URL"] %>
-  host: <%= ENV['MYDB_HOSTNAME'] %>
-  port: <%= ENV['MYDB_PORT'] %>
+  # url: <%= ENV["MYDB_DATABASE_URL"] %>
+  # host: <%= ENV['MYDB_HOSTNAME'] %>
+  # port: <%= ENV['MYDB_PORT'] %>
