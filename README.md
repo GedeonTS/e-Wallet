@@ -47,7 +47,7 @@ $ Rubocop
 
 ## Live Demo
 
-[Live Demo Link](https://ewallet-gedeonts.herokuapp.com/)
+[Live Demo Link](https://ewallet-gedeon.herokuapp.com/)
 
 ## Author
 
