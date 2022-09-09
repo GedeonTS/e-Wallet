@@ -29,5 +29,8 @@ test:
 production:
   <<: *default
   database: mydb
-  password: <%= ENV['MYADB_DATABASE_PASSWORD'] %>
-  url: <%= ENV["MY_APP_DATABASE_URL"] %>
+  username: Gedeonts
+  password: <%= ENV['MYDB_DATABASE_PASSWORD'] %>
+  url: <%= ENV["MYDB_DATABASE_URL"] %>
+  host: <%= ENV['MYDB_HOSTNAME'] %>
+  port: <%= ENV['MYDB_PORT'] %>
