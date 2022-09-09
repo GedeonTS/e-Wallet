@@ -1,6 +1,5 @@
 require 'rails_helper'
 
-
 RSpec.describe User, type: :view, js: true do
   before(:each) do
     @user = User.create(name: 'MyjUsesrd', email: 'gedeontshobohwa1@gmail.com', password: 'ddddddd')
