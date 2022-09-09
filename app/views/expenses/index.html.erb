@@ -1,0 +1,42 @@
+
+<div class="page-container">
+<nav class="categories-nav">
+<i class="fa-solid fa-bars"></i>
+<p><%=@group.name.capitalize %>
+</p>
+</nav>
+<div class="total-amount">
+Total spent: $ <%= @total %>
+</div>
+
+<div class="my-groups">
+<% if @expenses.empty?%>
+<h2>You have no expenses yet</h2>
+<% end %>
+<% @expenses.each do |expense| %>
+<div class="group-item expense-item">
+<%=  expense.name %>
+<%= button_to 'Delete', group_expense_path(expense.group_id, expense.id), method: :delete, data: { turbo: false }, class: 'btn btn-primary' %>
+<div>
+<%= expense.created_at.strftime("%d %b %Y") %>
+</div>
+
+<div>
+$<%= expense.amount %>
+</div>
+</div>
+<% end %>
+</div>
+</div>
+<div class="btn-wrapper">
+<div class="new-group-btn">
+<%= link_to "New Transaction",  new_group_expense_path %>
+</div>
+</div>
+<div class='footer footer-second'>
+<p>
+<i class="fa-solid fa-chevron-left"></i>
+<%= link_to 'Back', groups_path %>
+</p>
+<%= render 'shared/logout' %>
+</div>

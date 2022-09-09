@@ -1,0 +1,38 @@
+<div class="page-container">
+<nav class="categories-nav">
+<i class="fa-solid fa-bars"></i>
+<p>Categories</p>
+</nav>
+
+<div class="my-groups">
+<% if @groups.empty?%>
+<h2>You have no groups yet</h2>
+<% end %>
+<% @groups.each do |group| %>
+<div class="group-item">
+<div class="group-row-content">
+<% if group.icon.url.nil? %>
+<%= image_tag 'default.png',  :size => "50x50" %>
+<% else %>
+<%= image_tag group.icon.url, :size => "50x50" %>
+<% end %>
+<div>
+<%=link_to group.name, group_expenses_path(group.id), class: "group-name" %>
+<%= button_to 'Delete', group_path(group.id), method: :delete, data: { confirm: "Are you sure?" }, class: "btn-delete" %>
+</div>
+</div>
+<div class="group-amount-spent">
+<%= '$' + Expense.where(user_id:current_user.id, group_id:group.id).sum(:amount).to_s + ' spent'%>
+</div>
+</div>
+<% end %>
+</div>
+</div>
+<div class="btn-wrapper">
+<div class="new-group-btn">
+<%= link_to "New Group", new_group_path %>
+</div>
+</div>
+<div class='footer'>
+<%= render 'shared/logout' %>
+</div>
