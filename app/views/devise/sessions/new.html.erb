@@ -1,7 +1,6 @@
 <nav class="log-nav">
 <%= link_to " ", "/", class: "fa-solid fa-arrow-left" %>
 <h2>LOGIN</h2>
-<%= f.submit "Log In" %>
 </nav>
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
@@ -24,6 +23,7 @@
   <% end %>
 
   <div class="actions">
+<%= f.submit "Log In" %>
 
   </div>
 <% end %>

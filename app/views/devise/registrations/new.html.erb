@@ -2,7 +2,6 @@
 <%= link_to " ", "/", class: "fa-solid fa-arrow-left" %>
 
 <h2>REGISTER</h2>
-    <%= f.submit "Next" %>
 </nav>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
@@ -27,6 +26,7 @@
   <div class="sign-field">
     <%= f.password_field :password_confirmation, placeholder: " Confirm password", autocomplete: "new-password" %>
   </div>
+    <%= f.submit "Next" %>
 
 
 <% end %>
