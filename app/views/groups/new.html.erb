@@ -1,0 +1,21 @@
+<div>
+<nav class="categories-nav">
+<i class="fa-solid fa-bars"></i>
+<p>Create category</p>
+</nav>
+<%= form_with model:[Group.new], method: :post, local: true do |f| %>
+<div class="new-group-form">
+<%= f.file_field :icon, accept: 'image/png,image/jpeg', class: "form-text" %>
+<%= f.text_field :name, :placeholder => "Name goes here...", required: true, class: "form-text" %>
+<%= f.submit "Create", data: {disable_with: "Creating..."}, class: "btn btn-primary" %>
+
+</div>
+<% end %>
+</div>
+<div class='footer footer-second'>
+<p>
+<i class="fa-solid fa-chevron-left"></i>
+<%= link_to 'Back', groups_path %>
+</p>
+<%= render 'shared/logout' %>
+</div>
